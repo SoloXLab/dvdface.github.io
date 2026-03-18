@@ -13,6 +13,7 @@ export default defineUserConfig({
       { text: '首页', link: '/' },
       { text: '提示词', link: '/prompts/' },
       { text: '育儿', link: '/parenting/' },
+      { text: 'Android', link: '/android/' },
     ],
     sidebar: {
       '/prompts/': [
@@ -27,10 +28,20 @@ export default defineUserConfig({
           children: ['/parenting/README.md', '/posts/learning_by_research.md'],
         },
       ],
+      '/android/': [
+        {
+          text: 'Android 专栏',
+          children: ['/android/README.md', '/posts/android-io-optimization-insights.md'],
+        },
+      ],
       '/posts/': [
         {
           text: '文章',
-          children: ['/posts/prompt-writing-sop.md', '/posts/learning_by_research.md'],
+          children: [
+            '/posts/prompt-writing-sop.md',
+            '/posts/learning_by_research.md',
+            '/posts/android-io-optimization-insights.md',
+          ],
         },
       ],
     },
