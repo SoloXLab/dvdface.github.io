@@ -1,8 +1,14 @@
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
 import { viteBundler } from '@vuepress/bundler-vite'
+import { getDirname, path } from 'vuepress/utils'
+
+const __dirname = getDirname(import.meta.url)
 
 export default defineUserConfig({
+  alias: {
+    '@theme/VPHomeFeatures.vue': path.resolve(__dirname, 'components/VPHomeFeatures.vue'),
+  },
   bundler: viteBundler(),
   lang: 'zh-CN',
   title: '首页',
